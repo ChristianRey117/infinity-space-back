@@ -1,9 +1,8 @@
 import { Request, Response, Router } from "express";
+import scoreController from "../controllers/score.controller";
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  res.send("This is an example route!");
-});
+router.get("/", scoreController.getAllScores);
 
 export default router;
